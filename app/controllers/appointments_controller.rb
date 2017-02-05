@@ -7,7 +7,7 @@ class AppointmentsController < ApplicationController
 
   def create
     @appointment = Appointment.create(appointment_params)
-    redirect_to :root
+    @appointments = Appointment.order('appointment_time ASC')
   end
 
   private
