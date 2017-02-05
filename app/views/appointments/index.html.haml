@@ -5,12 +5,11 @@
 %h3 Make a new appointment
 
 = form_for @appointment, remote: true do |f|
-  = f.text_field :title
-  = f.text_field :appointment_time
+  = f.text_field :title, placeholder: 'Appointment title'
+  = f.text_field :appointment_time, placeholder: 'Time & Date'
   = f.submit 'Make appointment'
 
-- @appointments.each do |a|
-  %h3= a.title
-  %p= a.appointment_time
+#appointments
+  = render 'appointments'
 
 %p Learning to use React with Rails
