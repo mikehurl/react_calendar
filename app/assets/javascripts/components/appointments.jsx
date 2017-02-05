@@ -7,10 +7,14 @@ var Appointments = React.createClass( {
     }
   },
 
+  handleUserInput: function(object) {
+    this.setState(object);
+  },
+
   render: function() {
     return (
       <div>
-        <AppointmentForm input_title={this.state.title} input_appointment_time={this.state.appointment_time} />
+        <AppointmentForm input_title={this.state.title} input_appointment_time={this.state.appointment_time} onUserInput={this.handleUserInput} />
         <AppointmentsList appointments={this.state.appointments} />
       </div>
     )
