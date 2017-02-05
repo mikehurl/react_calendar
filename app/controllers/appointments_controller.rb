@@ -7,6 +7,7 @@ class AppointmentsController < ApplicationController
 
   def create
     @appointment = Appointment.create(appointment_params)
+    redirect_to :root
   end
 
   private
