@@ -2,14 +2,8 @@
 
 %h2 Appointments
 
-%h3 Make a new appointment
+= react_component('Appointments', appointments: @appointments)
 
-= form_for @appointment, remote: true do |f|
-  = f.text_field :title, placeholder: 'Appointment title'
-  = f.text_field :appointment_time, placeholder: 'Time & Date'
-  = f.submit 'Make appointment'
 
-#appointments
-  = render 'appointments'
 
 %p Learning to use React with Rails
